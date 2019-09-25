@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dp.qf.mapper.CarouselMapper">
+
+    <resultMap id="carousel" type="com.dp.qf.domain.vo.CarouselVo">
+        <id property="carouselId" column="carousel_id"/>
+        <result property="carouselStatus" column="carousel_status"/>
+        <result property="filmId" column="film_id"/>
+        <result property="pictureId" column="picture_id"/>
+        <collection property="films" resultMap="com.dp.qf.mapper.FilmMapper.film" >
+
+        </collection>
+        <collection property="pictures" resultMap="com.dp.qf.mapper.PictureMapper.picture">
+
+        </collection>
+    </resultMap>
+    
+    <select id="findByCarousel" resultMap="carousel">
+        select c.carousel_id,f.film_name,f.film_grade,f.film_synopsis,f.film_view_counts,f.film_box_office,
+               p.picture_path,p.picture_id
+            from carousel c
+        left join film f on c.film_id = f.film_id
+        left join picture p on c.picture_id = p.picture_id
+    </select>
+
+</mapper>

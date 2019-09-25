@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dp.qf.mapper.FilmMapper">
+
+    <resultMap id="film" type="com.dp.qf.domain.entity.Film">
+        <id property="filmId" column="film_id"/>
+        <result property="filmBoxOffice" column="film_box_office"/>
+        <result property="filmDate" column="film_date"/>
+        <result property="filmName" column="film_name"/>
+        <result property="filmSynopsis" column="film_synopsis"/>
+        <result property="filmViewCounts" column="film_view_counts"/>
+        <result property="filmGrade" column="film_grade"/>
+    </resultMap>
+    
+    <select id="findByFilm" resultType="com.dp.qf.domain.entity.Film">
+
+    </select>
+</mapper>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dp.qf.mapper.UserMapper">
+
+    <insert id="register">
+        insert into user(username, password, ipone, `e-mail`) VALUES (#{user.username},#{user.password},#{user.phone},#{user.email})
+    </insert>
+
+    <select id="login" resultType="com.dp.qf.domain.entity.User">
+        select u.username,u.password
+            from user u
+        where u.user_status = 1 and u.username = #{username} and u.password = #{password}
+    </select>
+</mapper>
