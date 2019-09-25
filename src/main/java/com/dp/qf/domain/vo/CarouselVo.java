@@ -16,6 +16,7 @@ public class CarouselVo extends Carousel {
     List<Carousel> carousels;
 
     List<Film> films;
+
     List<Picture> pictures;
 
 }

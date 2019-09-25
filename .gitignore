@@ -25,3 +25,6 @@
 hs_err_pid*
 
 .idea
+Spring-MVCMy-project.iml
+target
+index.jsp
