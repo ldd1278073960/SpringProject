@@ -27,7 +27,7 @@ public class CarouselController{
             List<Carousel> byCarousel = service.findByCarousel();
             return Result.success(byCarousel);
         }catch (Exception e){
-            log.error("错误");
+            log.error(e.getMessage());
             return Result.error();
         }
 
