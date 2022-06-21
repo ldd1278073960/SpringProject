@@ -26,7 +26,7 @@
         <junit.version>4.12</junit.version>
         <mybatisSpring.version>2.0.2</mybatisSpring.version>
         <slf4j.version>1.7.28</slf4j.version>
-        <mysql.version>8.0.17</mysql.version>
+        <mysql.version>8.0.28</mysql.version>
         <filter.version>1.3.2</filter.version>
     </properties>
 
